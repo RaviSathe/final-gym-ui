@@ -1,0 +1,287 @@
+.box{
+    
+}
+
+.profil-container{
+    width: 90%;
+    background: white;
+    // border: 2px solid grey;
+    margin:auto;
+    // min-height: 700px;
+    // height: 100vh;
+    padding:0 20px;
+    z-index:99
+}
+
+.left-profile{
+    width: 25%;
+    // background: skyblue;
+    border-right: 1px solid rgb(205, 205, 205);
+    height: 100%;
+}
+
+.profile-img-exp-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.profile-img{
+    display: flex;
+    gap: 10px;
+}
+
+.white-btn{
+    background: transparent;
+    border: 1px solid grey;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.main-div{
+    display: flex;
+    // background: blue;
+    padding: 10px 0;
+    // height: 850px;
+    // margin-bottom: 20px;
+}
+
+.mini-toggle-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.widgets{
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    margin-right: 10px;
+    padding:0 5px;
+    cursor: pointer;
+}
+
+.selected{
+    background: rgb(237, 237, 237);
+}
+
+.first-left-profile{
+    // background: lightcoral;
+    width: 100%;
+    height: 290px;
+    padding: 10px 20px;
+}
+
+.tagValue{
+    display: flex;
+    justify-content: space-between;
+    margin: 7px 0;
+}
+
+.tag{
+    font-size: 15px;
+    color: grey;
+    font-weight: 500;
+}
+
+h5{
+    font-size: 15px;
+}
+
+.tagValue .value{
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.client-list{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.client-name{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.request-info{
+    display: flex;
+}
+
+.icon-box{
+    height: 45px;
+    width: 45px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    margin-right: 5px;
+}
+
+.requestedPeople{
+    line-height: 20px;
+}
+
+.requestedPeople p{
+    font-size: 14px;
+}
+
+.right-main-info{
+    padding: 0 20px;
+    // background: red;
+    width: 74%;
+    height: 860px;
+}
+
+
+
+.trainer-all-tabs{
+    display: flex;
+    margin: 25px 0 0 10px;
+    gap: 5vw;
+}
+
+.tab-name{
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.second-left-profile{
+    padding: 0 10px;
+
+}
+
+.welcome-popup{
+    position: absolute;
+    height: 200px;
+    width: 400px;
+    border: 2px solid white;
+    background: rgb(237, 158, 10);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 30%;
+    left: 40%;
+}
+
+.router{
+    // background: skyblue;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    overflow:scroll;
+
+}
+
+// -------------------Resopnsiv-----------------
+
+@media(max-width:1326px){
+    .hrr{
+        width: 30%;
+    }
+}
+
+@media(max-width:1200px){
+    .profil-container{
+        width: 95%;
+    }
+}
+
+@media(max-width:1100px){
+    .left-profile{
+        width: 30%;
+    }
+}
+
+@media(max-width:930px){
+    .profil-container{
+        width: 100%;
+    }
+
+    .left-profile{
+        display: flex;
+        width: 100%;
+        // background: skyblue;
+        gap: 2vw;
+        margin-bottom: 50px;
+        border: none;
+    }
+
+    .t-hr{
+        display: none;
+    }
+
+    .main-div{
+        flex-direction: column;
+    }
+
+    .mini-toggle-box{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .first-left-profile{
+        width: 250px;
+        padding: 0 10px;
+    }
+
+    .second-left-profile{
+        width: 200px;
+        margin-right: 20px;
+    }
+
+    .third-left-profile{
+        width: 200px;
+    }
+
+    .right-main-info{
+        width: 100%;
+    }
+}
+
+@media(max-width:775px){
+    .left-profile{
+        flex-direction: column;
+        // align-items: center;
+        width: 100%;
+        // padding: 0 10px;
+    }
+
+    .mini-toggle-box{
+        flex-direction: row;
+    }
+
+    .first-left-profile{
+        width: 100%;
+    }
+
+    .second-left-profile{
+        width: 100%;
+    }
+
+    .third-left-profile{
+        width: 100%;
+    }
+
+    .right-main-info{
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    .hrr{
+        display: none;
+    }
+
+    .trainer-all-tabs{
+        gap: 3vw;
+    }
+
+    .tab-name{
+        font-size: 3vw;
+    }
+}

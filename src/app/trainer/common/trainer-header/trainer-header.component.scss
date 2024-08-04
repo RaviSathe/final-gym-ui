@@ -1,0 +1,56 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 999999;
+    // background: red;
+}
+
+
+.logo span{
+    cursor: pointer;
+}
+
+.burger-menu{
+    display: none;
+}
+
+.nav-tabs{
+    border-bottom: 0;
+}
+
+.nav-tabs div{
+    display: inline-block;
+    margin:0 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.nav-tabs div:hover{
+    scale: 1.1;
+}
+
+.btn{
+    background: black;
+    color: white;
+}
+
+.btn:hover{
+    opacity: .8;
+}
+
+@media(max-width:730px){
+    .nav-tabs{
+        display: none;
+    }
+
+    .action-btn{
+        display: none;
+    }
+
+    .burger-menu{
+        display: block;
+        cursor: pointer;
+    }
+
+}

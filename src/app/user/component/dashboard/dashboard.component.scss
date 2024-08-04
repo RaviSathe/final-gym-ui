@@ -1,0 +1,227 @@
+.containerr{
+    width: 90%;
+    margin: auto;
+    // margin-bottom: 100px;
+}
+.header{
+    width: 100%;
+    height: 65px;
+    background: rgb(232 229 229);
+    display: flex;
+    align-items: center;
+}
+
+.left-logo img{
+    margin-left: 20px;
+}
+
+// .middle-search{
+//     width: 30%;
+// }
+
+.search-input{
+    width: 30%;
+    padding: 7px 15px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: none;
+    margin: 0 20px;
+}
+
+.user-dashoard{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.left-content{
+    width: 80%;
+    // height: 800px;
+    // background: skyblue;
+}
+
+.cc{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.right-advertisment{
+    width: 19%;
+    // height: 800px;
+    background: lightcoral;
+}
+
+.graph-products{
+    width: 65%;
+}
+
+.info-activity{
+    width: 33%;
+}
+
+.graph{
+    width: 100%;
+    height: 270px;
+    // background: lightgreen;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+}
+
+.suggestion-one{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.questions{
+    width: 25%;
+    box-shadow: 0 0 7px 1px rgba(0,0,0,0.3);
+    height: 250px;
+}
+
+.trainer-suggestion{
+    width: 73%;
+    box-shadow: 0 0 7px 1px rgba(0,0,0,0.3);
+    height: 250px;
+}
+
+.recommendations-activity{
+    display: flex;
+    justify-content: space-between;
+}
+
+.recommended-food{
+    width: 60%;
+    height: 230px;
+    box-shadow: 0 0 7px 1px rgba(0,0,0,0.3);
+}
+
+.user-activity{
+    width: 38%;
+    height: 230px;
+    box-shadow: 0 0 7px 1px rgba(0,0,0,0.3);
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-info{
+    // background: skyblue;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    // box-shadow: 0 0 7px 1px rgba(0,0,0,0.3);
+}
+
+.age-weoght-height{
+    border-radius: 10px;
+    width: 32%;
+    height: 80px;
+    background: rgba(217, 217, 217, 1);
+}
+
+.bmi-box{
+    width: 25%;
+    height: 80px;
+    background: rgba(217, 217, 217, 1);
+    box-shadow: 0 0 7px 1px rgba(0,0,0,0.3);  
+}
+
+.callories-info{
+    background: rgba(217, 217, 217, 1);
+    box-shadow: 0 0 7px 1px rgba(0,0,0,0.3);    
+    margin: 20px 0;
+    height: 130px;
+    width: 100%;
+}
+
+.sleep-water-cards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sleep-card{
+    width: 49%;
+    height: 80px;
+    background: rgba(217, 217, 217, 1);
+}
+
+.water-card{
+    width: 49%;
+    height: 80px;
+    background: rgba(217, 217, 217, 1);
+}
+
+.user-todays-walk-map{
+    width: 100%;
+    height: 200px;
+    background: rgba(217, 217, 217, 1);
+    margin: 10px 0;
+}
+
+// ------------Responsive-----------
+
+@media(max-width:1450px){
+    .containerr{
+        width: 99%;
+        margin: auto;
+    }
+}
+
+@media(max-width:1050px){
+    .right-advertisment{
+        display: none;
+    }
+
+    .left-content{
+        width: 95%;
+        margin: auto;
+    }
+}
+
+@media(max-width:750px){
+    .cc{
+        flex-direction: column-reverse;
+    }
+
+    .info-activity{
+        width: 95%;
+        margin: auto;
+    }
+
+    .graph-products{
+        width: 95%;
+        margin: auto;
+    }
+}
+
+@media(max-width:550px){
+    .suggestion-one, .recommendations-activity{
+        flex-direction: column-reverse;
+        // column-gap: 5px;
+        margin-top:10px ;
+    }
+
+    .questions, .trainer-suggestion, .recommended-food, .user-activity{
+        width: 100%;
+        margin:10px auto 0 auto;
+    }
+
+    // {
+    //     width: 100%;
+    //     margin: auto;
+    // }
+}
+
+@media(max-width:450px){
+    .logo{
+        display: none;
+    }
+
+    .search-input{
+        width: 60%;
+    }
+}

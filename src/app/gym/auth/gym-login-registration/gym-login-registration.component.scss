@@ -1,0 +1,150 @@
+.box{
+    background: rgb(205, 205, 205);
+    // height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.form-page{
+    width: 80%;
+    height: 630px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+form{
+    margin-bottom: 10px;
+}
+
+.left-input{
+    width: 48%;
+    // background: skyblue;
+    height: 100%;
+    text-align: center;
+    padding: 0 8vw;
+}
+h3{
+    margin: 15px 0 10px 0;
+    font-weight: 700;
+}
+
+.g-btn{
+    padding: 1vh 5vw;
+    border: 1px solid grey;
+    background: transparent;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(141, 140, 140);
+    margin-bottom: 5px;
+}
+
+.right-img{
+    width: 48%;
+    background: black;
+    height: 100%;
+}
+
+.middle-line{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // width: 150px;
+}
+
+.middle-line hr{
+    width: 130px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+label{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.userInput{
+    padding: 5px 10px;
+    margin: 3px 0;
+}
+
+.t-and-c{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.t-and-c input{
+    padding: 3px;
+    cursor: pointer;
+}
+
+.t-and-c div{
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 5px;
+    cursor: pointer;
+
+}
+
+.btn-black{
+    background: black;
+    color: white;
+    border: none;
+    padding: 9px 30px;
+    width: 100%;
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input::placeholder{
+    font-size: 13px;
+}
+
+
+// --Responsive----------------
+@media(max-width:1370px){
+    .left-input{
+        padding: 0 5vw;
+    }
+}
+
+@media(max-width:1020px){
+    .left-input{
+        padding: 0 2vw;
+    }
+
+    .right-img{
+        display: none;
+    }
+
+    .form-page{
+        justify-content: center;
+    }
+}
+
+@media(max-width:940px){
+    .left-input{
+        width: 90%;
+    }
+}
+
+@media(max-width:400px){
+    h3{
+        font-size: 20px;
+    }
+
+    .pp{
+        font-size: 8px;
+    }
+}

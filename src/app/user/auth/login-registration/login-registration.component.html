@@ -1,0 +1,99 @@
+<div class="box">
+    <div class="form-page">
+        <div class="left-input" style="overflow: hidden;">
+            <h3>Create Your Account</h3>
+            <!-- <p class="pp" style="font-size: 13px; color: rgb(181, 178, 178);">Welcome back, please enter your details</p> -->
+            <button class="g-btn"><img width="20px" src="assets/img/google-g-img.png" alt=""> Sign up with Google</button>
+
+            <div class="middle-line">
+                <hr>OR <hr>
+            </div>
+
+            <form  *ngIf="!loginForm">
+                <div class="form-number" *ngIf="formNumber == 1">
+                    <div class="input">
+                        <label>Name</label>
+                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                    </div>
+                    <div class="input">
+                        <label>Email</label>
+                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                    </div>
+                    <div class="input">
+                        <label>Password</label>
+                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                    </div>
+                    <div class="input">
+                        <label>Password</label>
+                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                    </div>
+                    <div class="input">
+                        <label>Password</label>
+                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                    </div>
+
+                    <div class="t-and-c">
+                        <input type="checkbox" name="" id="">
+                        <div>I accept all terms & conditions.</div>
+                    </div>
+
+                    <button type="button" (click)="registerUser()" class="btn-black">Register</button>
+                    <!-- <button type="button" (click)="onNext()" class="btn-black">Next</button> -->
+                </div>
+
+                <!-- <div class="form-number" *ngIf="formNumber == 2">
+                    <div class="input">
+                        <label>Name</label>
+                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                    </div>
+                    <div class="input">
+                        <label>Email</label>
+                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                    </div>
+                    <div class="input">
+                        <label>Password</label>
+                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                    </div>
+                    <div class="input">
+                        <label>Password</label>
+                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                    </div>
+                    <div class="input">
+                        <label>Password</label>
+                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                    </div>
+
+                    <div class="t-and-c">
+                        <input type="checkbox" name="" id="">
+                        <div>I accept all terms & conditions.</div>
+                    </div>
+
+                    <div class="next-back" style="display: flex; justify-content: space-between;">
+                        <button type="button" (click)="onBack()" style="width: 45%;" class="btn-black">Back</button>
+                        <button type="button" (click)="onNext()" style="width: 45%;" class="btn-black">Next</button>
+                    </div>
+                </div> -->
+
+            </form>
+
+            <a style="margin-top: 10px; text-align: left;">Already Have account? Login!</a>
+            <!-- ----------------Login Form from below--------------- -->
+
+            <form *ngIf="loginForm">
+                <div class="form-number">
+                    <div class="input">
+                        <label>Email</label>
+                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                    </div>
+                    <div class="input">
+                        <label>Password</label>
+                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                    </div>
+                    <button class="btn-black" type="button" (click)="loginUser()">Login</button>
+                </div>
+
+            </form>
+        </div>
+        <div class="right-img"></div>
+    </div>
+</div>

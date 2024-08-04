@@ -1,0 +1,95 @@
+.all-box{
+    // background: skyblue;
+    width: 100%;
+    height: 720px;
+}
+
+.filters{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.filter-select{
+    background: transparent;
+    color: black;
+    border: 1px slid grey;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+}
+
+.filters input{
+    min-width: 110px;
+    width: 10vw;
+}
+
+.gyms{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    // align-items: center;
+    justify-content: center;
+}
+
+.gym-card{
+    width: 250px;
+    height: 300px;
+    // border: 1px solid grey;
+}
+
+.gym-img{
+    width: 100%;
+    height: 150px;
+}
+
+.gym-name{
+    margin: 10px 0 5px 0;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+.gym-location{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.rating{
+    padding: 4px 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.action-btn-trainer{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.action-btn-trainer button,input{
+    background: transparent;
+    border: 1px solid grey;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.white-btn{
+    color: grey;
+    border: 1px solid grey;
+    padding: 7px 15px;
+    border-radius: 5px;
+    background: transparent;
+    margin-top: 15px;
+}
+
+@media(max-width:320px){
+    .filter-select{
+        width: 120px;
+    }
+}

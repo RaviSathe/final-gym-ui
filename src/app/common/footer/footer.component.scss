@@ -1,0 +1,136 @@
+
+marquee{
+    padding: 5px;
+    background: black;
+    color: white;
+    font-weight: 600;
+}
+
+footer{
+    width: 100%;
+    // height: 400px;
+    // background: rgb(194, 194, 194);
+    display: flex;
+    padding: 40px 70px;
+    // margin: 20px 0;
+}
+
+.left-footer{
+    width: 35%;
+    // background: skyblue;
+}
+
+.right-footer{
+    width: 62%;
+    // background: lightcoral;
+    display: flex;
+}
+
+.footer-img{
+
+}
+
+.social-medial{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+    // justify-content: center;
+}
+
+.social-icons{
+    width: 40px;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.social-icons img{
+    margin-top: 10px;
+}
+
+.footer-product-info{
+    // background: skyblue;
+    width: 200px;
+    margin-right: 20px;
+}
+
+.footer-product-info .head-name{
+    // color: red;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.our-product{
+    color: grey;
+    font-weight: 500;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.footer-product-info input{
+    min-width: 150px;
+    padding: 7px 15px;
+    border-radius: 20px;
+    border: 1px solid grey;
+    margin: 10px 0;
+}
+
+.footer-product-info button{
+    border: 1px solid grey;
+    padding: 7px 15px;
+    color: grey;
+    background: transparent;
+    border-radius: 10px;
+}
+
+@media(max-width:1140px){
+    .left-footer{
+        width: 25%;
+        // background: skyblue;
+    }
+
+    footer{
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+
+    .right-footer{
+        // background: lightcoral;
+        width: 70%;
+    }
+}
+
+@media(max-width:1100px){
+    .right-footer{
+        width: 75%;
+    }
+}
+
+@media(max-width:905px){
+    footer{
+        flex-direction: column;
+    }
+
+    .left-footer{
+        width: 100%;
+    }
+
+    .right-footer{
+        width: 100%;
+    }
+}
+
+@media(max-width:700px){
+    .right-footer{
+        flex-wrap: wrap;
+        // height: 700px;
+        justify-content: center;
+    }
+
+    .footer-product-info{
+        margin: 20px 0;
+    }
+}

@@ -1,0 +1,141 @@
+.profil-container{
+    width: 90%;
+    background: white;
+    // border: 2px solid grey;
+    margin: 50px auto 100px auto;
+    // min-height: 700px;
+    // height: 100vh;
+    padding:0 20px;
+}
+
+.left-profile{
+    width: 25%;
+    // background: skyblue;
+    border-right: 1px solid rgb(205, 205, 205);
+    height: 100%;
+}
+
+.profile-img-exp-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.profile-img{
+    display: flex;
+    gap: 10px;
+}
+
+.white-btn{
+    background: transparent;
+    border: 1px solid grey;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 1vw;
+}
+
+.main-div{
+    display: flex;
+    // background: blue;
+    padding: 10px 0;
+    height: 850px;
+    // margin-bottom: 20px;
+}
+
+.mini-toggle-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.widgets{
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    margin-right: 10px;
+    padding:0 5px;
+    cursor: pointer;
+}
+
+.selected{
+    background: rgb(237, 237, 237);
+}
+
+.first-left-profile{
+    // background: lightcoral;
+    width: 100%;
+    height: 250px;
+    padding: 10px 20px;
+}
+
+.tagValue{
+    display: flex;
+    justify-content: space-between;
+    margin: 7px 0;
+}
+
+.tag{
+    font-size: 15px;
+    color: grey;
+    font-weight: 500;
+}
+
+h5{
+    font-size: 15px;
+}
+
+.tagValue .value{
+    font-weight: 600;
+    font-size: 1vw;
+}
+
+.client-list{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.client-name{
+    font-weight: 500;
+    font-size: 1vw;
+}
+
+.request-info{
+    display: flex;
+}
+
+.icon-box{
+    height: 45px;
+    width: 45px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    margin-right: 5px;
+}
+
+.requestedPeople{
+    line-height: 20px;
+}
+
+.requestedPeople p{
+    font-size: 1vw;
+}
+
+.right-main-info{
+    padding: 0 20px;
+    // background: skyblue;
+    width: 74%;
+}
+
+.trainer-all-tabs{
+    display: flex;
+    margin: 25px 0 0 10px;
+    gap: 70px;
+}
+
+.tab-name{
+    font-weight: 600;
+    cursor: pointer;
+}
