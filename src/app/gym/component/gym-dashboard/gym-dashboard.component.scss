@@ -226,7 +226,50 @@ label{
     background-color: rgb(216, 216, 216);
 }
 
+.third-gym-div{
+    // background: skyblue;
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.third-gym-div-left{
+    border: 1px solid grey;
+    height: 300px;
+    width: 45%;
+}
+
+.third-gym-div-right{
+    height: 300px;
+    width: 53%;
+    border: 1px solid grey;
+}
+
+.third-gym-div-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    filter: blur(10px);
+}
+
+.third-gym-div-right img:hover{
+    // cursor: url("https://plus.unsplash.com/premium_photo-1682310071124-33632135b2ee?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
 // -----Responsive---------------
+
+@media(max-width:1180px){
+    .third-gym-div{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .third-gym-div-left, .third-gym-div-right{
+        width: 100%;
+    }
+}
 
 @media(max-width:1000px){
     .first-gym-div{

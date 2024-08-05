@@ -12,57 +12,70 @@
             <form  *ngIf="!loginForm">
                 <div class="form-number" *ngIf="formNumber == 1">
                     <div class="input">
-                        <label>Name</label>
-                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                        <label>First Name</label>
+                        <input type="text" placeholder="First Name" class="userInput">
                     </div>
                     <div class="input">
-                        <label>Email</label>
-                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Last Name" class="userInput">
                     </div>
                     <div class="input">
-                        <label>Password</label>
-                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                        <label>Date of Birth</label>
+                        <input type="date" placeholder="Last Name" class="userInput">
                     </div>
                     <div class="input">
-                        <label>Password</label>
-                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                        <label>Gender</label>
+                            <select name="" id="" class="userInput">
+                                <option value="">Male</option>
+                                <option value="">Femail</option>
+                                <option value="">Other</option>
+                        </select>
                     </div>
                     <div class="input">
-                        <label>Password</label>
-                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                        <label>Country</label>
+                            <select name="" id="" class="userInput">
+                                <option value="">India</option>
+                                <option value="">America</option>
+                                <option value="">Europe</option>
+                        </select>
                     </div>
-
-                    <div class="t-and-c">
-                        <input type="checkbox" name="" id="">
-                        <div>I accept all terms & conditions.</div>
+                    <div class="input">
+                        <label>State</label>
+                            <select name="" id="" class="userInput">
+                                <option value="">Maharashtra</option>
+                                <option value="">Tamilnadu</option>
+                                <option value="">Andrapradesh</option>
+                        </select>
                     </div>
-
-                    <button type="button" (click)="registerTrainer()" class="btn-black">Register</button>
-                    <!-- <button type="button" (click)="onNext()" class="btn-black">Next</button> -->
+                    <div class="input">
+                        <label>City</label>
+                            <select name="" id="" class="userInput">
+                                <option value="">Navi Mumbai</option>
+                                <option value="">Mumbai</option>
+                                <option value="">Thane</option>
+                        </select>
+                    </div>
+                    <!-- <button type="button" (click)="registerTrainer()" class="btn-black">Register</button> -->
+                    <button type="button" (click)="onNext()" class="btn-black">Next</button>
                 </div>
 
-                <!-- <div class="form-number" *ngIf="formNumber == 2">
+                <div class="form-number" *ngIf="formNumber == 2">
                     <div class="input">
-                        <label>Name</label>
-                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                        <label>Pincode</label>
+                        <input type="number" placeholder="Pincode" class="userInput">
+                    </div>
+                    <div class="input">
+                        <label>Mobile Number</label>
+                        <input type="number" placeholder="Mobile Number" class="userInput">
                     </div>
                     <div class="input">
                         <label>Email</label>
-                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                        <input type="email" placeholder="Enter Email" class="userInput">
                     </div>
                     <div class="input">
                         <label>Password</label>
-                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                        <input type="password" placeholder="Enter Password" class="userInput">
                     </div>
-                    <div class="input">
-                        <label>Password</label>
-                        <input type="text" placeholder="Enter Your Name" class="userInput">
-                    </div>
-                    <div class="input">
-                        <label>Password</label>
-                        <input type="text" placeholder="Enter Your Name" class="userInput">
-                    </div>
-
                     <div class="t-and-c">
                         <input type="checkbox" name="" id="">
                         <div>I accept all terms & conditions.</div>
@@ -70,9 +83,9 @@
 
                     <div class="next-back" style="display: flex; justify-content: space-between;">
                         <button type="button" (click)="onBack()" style="width: 45%;" class="btn-black">Back</button>
-                        <button type="button" (click)="onNext()" style="width: 45%;" class="btn-black">Next</button>
+                        <button type="button" (click)="registerTrainer()" style="width: 45%;" class="btn-black">Register</button>
                     </div>
-                </div> -->
+                </div>
 
             </form>
 

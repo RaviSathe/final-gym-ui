@@ -12,20 +12,34 @@
             <form  *ngIf="!loginForm">
                 <div class="form-number" *ngIf="formNumber == 1">
                     <div class="input">
-                        <label>Name</label>
-                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                        <label>First Name</label>
+                        <input type="text" placeholder="Enter First Name" class="userInput">
+                    </div>
+                    <div class="input">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Enter Last Name" class="userInput">
+                    </div>
+                    <div class="mini-par">
+                        <div class="input" width="30%">
+                            <label>Age</label>
+                            <input type="number" placeholder="Enter Your Name" class="mini-userInput">
+                        </div>
+                        <div class="input" width="30%">
+                            <label>Gender</label>
+                            <select name="" id="" class="mini-userInput">
+                                <option value="">Male</option>
+                                <option value="">Femail</option>
+                                <option value="">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <label>Mobile Number</label>
+                        <input type="number" placeholder="Enter Your Name" class="userInput">
                     </div>
                     <div class="input">
                         <label>Email</label>
-                        <input type="text" placeholder="Enter Your Name" class="userInput">
-                    </div>
-                    <div class="input">
-                        <label>Password</label>
-                        <input type="text" placeholder="Enter Your Name" class="userInput">
-                    </div>
-                    <div class="input">
-                        <label>Password</label>
-                        <input type="text" placeholder="Enter Your Name" class="userInput">
+                        <input type="email" placeholder="Enter Your Name" class="userInput">
                     </div>
                     <div class="input">
                         <label>Password</label>

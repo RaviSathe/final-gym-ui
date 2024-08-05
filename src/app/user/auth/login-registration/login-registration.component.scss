@@ -9,7 +9,7 @@
 
 .form-page{
     width: 80%;
-    height: 630px;
+    height: 700px;
     background: white;
     display: flex;
     justify-content: space-between;
@@ -112,6 +112,23 @@ input::placeholder{
 }
 
 
+// ===================
+.mini-par{
+    display: flex;
+    justify-content: space-between;
+    // background: skyblue;
+    width: 100%;
+    // align-items: center;
+}
+
+.mini-userInput{
+    width:  100%;
+    padding: 5px 10px;
+    // text-align: center;
+}
+// ================
+
+
 // --Responsive----------------
 @media(max-width:1370px){
     .left-input{
@@ -146,5 +163,15 @@ input::placeholder{
 
     .pp{
         font-size: 8px;
+    }
+}
+
+@media(max-width:515px){
+    .mini-par{
+        flex-direction: column;
+    }
+
+    .form-page{
+        height: 720px;
     }
 }
