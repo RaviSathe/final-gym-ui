@@ -112,23 +112,6 @@ input::placeholder{
 }
 
 
-// ===================
-.mini-par{
-    display: flex;
-    justify-content: space-between;
-    // background: skyblue;
-    width: 100%;
-    // align-items: center;
-}
-
-.mini-userInput{
-    width:  100%;
-    padding: 5px 10px;
-    // text-align: center;
-}
-// ================
-
-
 // --Responsive----------------
 @media(max-width:1370px){
     .left-input{
@@ -156,6 +139,16 @@ input::placeholder{
     }
 }
 
+@media(max-width:550px){
+    .form-page{
+        width: 98%;
+    }
+
+    .left-input{
+        width: 95%;
+    }
+}
+
 @media(max-width:400px){
     h3{
         font-size: 20px;
@@ -163,15 +156,5 @@ input::placeholder{
 
     .pp{
         font-size: 8px;
-    }
-}
-
-@media(max-width:515px){
-    .mini-par{
-        flex-direction: column;
-    }
-
-    .form-page{
-        height: 720px;
     }
 }

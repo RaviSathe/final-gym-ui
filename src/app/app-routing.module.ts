@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './common/landing-page/landing-page.component';
 import { LoginRegistrationComponent } from './user/auth/login-registration/login-registration.component';
-import { ProfileDetailsComponent } from './user/profile-details/profile-details.component';
 import { DashboardComponent } from './user/component/dashboard/dashboard.component';
 import { AllGymsListComponent } from './user/component/all-gyms-list/all-gyms-list.component';
 import { AllTrainerListComponent } from './user/component/all-trainer-list/all-trainer-list.component';
@@ -15,7 +14,6 @@ const routes: Routes = [
   {path:'all-gyms',component:AllGymsListComponent,title:'Gyms'},
   {path:'all-trainers',component:AllTrainerListComponent,title:'Trainers'},
   {path:'other-services',component:OtherUserSericesComponent,title:'Services'},
-  {path:'profile',component:ProfileDetailsComponent,title:'Profile'},
   { path: 'gym', loadChildren: () => import('./gym/gym.module').then(m => m.GymModule) },
   { path: 'trainer', loadChildren: () => import('./trainer/trainer.module').then(m => m.TrainerModule) },
 ];

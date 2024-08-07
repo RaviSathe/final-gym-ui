@@ -1,1 +1,418 @@
-<p>all-trainer-list works!</p>
+<div class="all-trainer-list-container">
+    <div class="left-trainer-filter">
+        <h4 style="padding:10px 0 22px 0;">Filters</h4>
+        <div class="filter-div">
+            <div class="t-l-heading">
+                <h5>Hourly Rates</h5>
+                <div class="tl-h-clear">Clear</div>
+            </div>
+
+            <div class="inp-box">
+                <div class="input-con">
+                    <label for="min">min</label>
+                    <input type="text" placeholder="0">
+                </div>
+                <div style="font-size: 18px; font-weight: 500; margin: 10px 5px 10px 5px;"> to </div>
+                <div class="input-con">
+                    <label for="min">max</label>
+                    <input type="text" placeholder="0">
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-div">
+            <div class="t-l-heading">
+                <h5>Required for <span style="font-size: 14px; font-weight: 500;">(skills)</span></h5>
+                <div class="tl-h-clear">Clear</div>
+            </div>
+
+            <input type="text" class="search-trainer-skill" placeholder="Required for">
+
+            <div class="trainer-skills-div-with-checkbox">
+                <div class="chk-con" *ngFor="let trainer of personalTrainerTypes">
+                    <input type="checkbox" id="{{trainer}}" class="my-checkbox">
+                    <label for="{{trainer}}">{{trainer}}</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-div">
+            <div class="t-l-heading">
+                <h5>Search Trainer <span style="font-size: 14px; font-weight: 500;">(state/city)</span></h5>
+                <div class="tl-h-clear">Clear</div>
+            </div>
+
+            <div class="select">
+                <div class="custom-dropdown">
+                    <div class="custom-dropdown-selected" (click)="toggleStateDropdown()">
+                      {{ selectedStateOption || 'Select a state' }}
+                    </div>
+                    <div class="custom-dropdown-options" *ngIf="stateDropdown">
+                      <div class="custom-dropdown-option" *ngFor="let state of indianStates" (click)="selectStateOption(state)">
+                        {{ state.name }}
+                      </div>
+                    </div>
+                  </div>                  
+            </div>
+            <div class="select">
+                <div class="custom-dropdown">
+                    <div class="custom-dropdown-selected" (click)="toggleCityDropdown()">
+                      {{ selectedCityOption || 'Select a City' }}
+                    </div>
+                    <div class="custom-dropdown-options" *ngIf="cityDropdown">
+                      <div class="custom-dropdown-option" *ngFor="let city of maharashtraState" (click)="selectCityOption(city)">
+                        {{ city.city }}
+                      </div>
+                    </div>
+                  </div>                  
+            </div>
+
+            <div class="select custom-dropdown" >
+                <select name="" id="" class="custom-dropdown-selected">
+                    <option class="custom-dropdown-option" value="nearby">NearBy</option>
+                    <option class="custom-dropdown-option" value="featured">Featured</option>
+                    <option class="custom-dropdown-option" value="newTrainer">New Trainer</option>
+                </select>  
+            </div>
+        </div>
+
+        <div class="filter-div">
+            <div class="t-l-heading" style="margin-bottom:7px;">
+                <h5>Online </h5>
+                <!-- <div class="tl-h-clear">Clear</div> -->
+            </div>
+
+            <div class="switch-with-info">
+                <div class="container">
+                    <input type="checkbox" class="checkbox" id="checkbox">
+                    <label class="switch" for="checkbox">
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+
+                  <div class="oot">Only Online Trainers</div>
+            </div>
+        </div>
+
+        <div class="filter-div">
+            <div class="t-l-heading">
+                <h5>Ratings </h5>
+                <div class="tl-h-clear">Clear</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="right-trainer-list">
+        <div class="top-heading-trainer-list">
+            <input type="text" name="" id="" placeholder="Search Trainer" class="onlyOnMobileView">
+            <div class="top-h-left">
+                <h4>Top results</h4>
+                <div>1-20 of 200 results</div>
+            </div>
+            <div class="top-h-right">
+                Sort by
+                <select name="" id="" class="right-c-filter">
+                    <option value="mostRelevent">Most Relevent</option>
+                </select>
+                <i class="ri-menu-line burger-menu"></i>
+            </div>
+            <i class="ri-menu-line burger-menuu"></i>
+        </div>
+
+        <div class="trainer-list-box">
+            <div class="trainer-fil-card">
+                <div class="left-fil-trainer-img"><img src="https://media.istockphoto.com/id/1702029360/photo/muscular-man-doing-strength-workout-exercise-in-the-gym.webp?b=1&s=170667a&w=0&k=20&c=vSIwWC7edSlq9ok7lmMMEHzxHjWFclQ3LoIUEMNJGjY=" alt=""></div>
+                <div class="right-fil-trainer-info">
+                    <div class="first-tr-fil-right-info">
+                        <h3>Alber Willium <span class="trainer-mention" >&commat;albertwillium</span></h3>
+                        <div class="fil-tr-price">2,000/ <span class="pr-hr" >hr</span></div>
+                    </div>
+                    <div class="first-tr-fil-right-info">
+                        <div><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        <span>5.0</span>
+                        </div>
+                    </div>
+
+                    <div class="second-tr-fil-right-info">
+                        <div> <i class="ri-map-pin-line"></i> <span  class="right-fil-tri-location">Ghansoli - Navi Mumbai</span></div>
+                        <div class="right-fil-tri-fav"><i class="ri-heart-line"></i></div>
+                    </div>
+
+                    <div class="third-tr-fil-right-short-info">
+                        {{ showFullInfo ? trainerInfo : (trainerInfo | slice:0:maxLength) + '...' }}
+                        <span style="color: blue; cursor: pointer;" *ngIf="isLongText" (click)="toggleTrainerInfoMore()">
+                            {{ showFullInfo ? 'Show Less' : 'Show More' }}
+                          </span>
+                    </div>
+
+                    <div class="fifth-tr-fil-specilization">
+                        <div class="spe-in">
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                        </div>
+
+                        <div class="trai-fil-right-btn">
+                            <button class="btn-know-more">Know more</button>
+                            <button class="btn-know-more" style="background: skyblue;">Get Train</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trainer-fil-card">
+                <div class="left-fil-trainer-img"><img src="https://media.istockphoto.com/id/1702029360/photo/muscular-man-doing-strength-workout-exercise-in-the-gym.webp?b=1&s=170667a&w=0&k=20&c=vSIwWC7edSlq9ok7lmMMEHzxHjWFclQ3LoIUEMNJGjY=" alt=""></div>
+                <div class="right-fil-trainer-info">
+                    <div class="first-tr-fil-right-info">
+                        <h3>Alber Willium <span style="font-size: 16px; font-weight: 400;">&commat;albertwillium</span></h3>
+                        <div class="fil-tr-price">2,000/ <span style="font-size: 16px; font-weight: 400;">per hour</span></div>
+                    </div>
+                    <div class="first-tr-fil-right-info">
+                        <div><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        5.0
+                        </div>
+                    </div>
+
+                    <div class="second-tr-fil-right-info">
+                        <div> <i class="ri-map-pin-line"></i> <span  class="right-fil-tri-location">Ghansoli - Navi Mumbai</span></div>
+                        <div class="right-fil-tri-fav"><i class="ri-heart-line"></i></div>
+                    </div>
+
+                    <div class="third-tr-fil-right-short-info">
+                        {{ showFullInfo ? trainerInfo : (trainerInfo | slice:0:maxLength) + '...' }}
+                        <span style="color: blue; cursor: pointer;" *ngIf="isLongText" (click)="toggleTrainerInfoMore()">
+                            {{ showFullInfo ? 'Show Less' : 'Show More' }}
+                          </span>
+                    </div>
+
+                    <div class="fifth-tr-fil-specilization">
+                        <div class="spe-in">
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                        </div>
+
+                        <div class="trai-fil-right-btn">
+                            <button class="btn-know-more">Know more</button>
+                            <button class="btn-know-more" style="background: skyblue;">Request to Train</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trainer-fil-card">
+                <div class="left-fil-trainer-img"><img src="https://media.istockphoto.com/id/1702029360/photo/muscular-man-doing-strength-workout-exercise-in-the-gym.webp?b=1&s=170667a&w=0&k=20&c=vSIwWC7edSlq9ok7lmMMEHzxHjWFclQ3LoIUEMNJGjY=" alt=""></div>
+                <div class="right-fil-trainer-info">
+                    <div class="first-tr-fil-right-info">
+                        <h3>Alber Willium <span style="font-size: 16px; font-weight: 400;">&commat;albertwillium</span></h3>
+                        <div class="fil-tr-price">2,000/ <span style="font-size: 16px; font-weight: 400;">per hour</span></div>
+                    </div>
+                    <div class="first-tr-fil-right-info">
+                        <div><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        5.0
+                        </div>
+                    </div>
+
+                    <div class="second-tr-fil-right-info">
+                        <div> <i class="ri-map-pin-line"></i> <span  class="right-fil-tri-location">Ghansoli - Navi Mumbai</span></div>
+                        <div class="right-fil-tri-fav"><i class="ri-heart-line"></i></div>
+                    </div>
+
+                    <div class="third-tr-fil-right-short-info">
+                        {{ showFullInfo ? trainerInfo : (trainerInfo | slice:0:maxLength) + '...' }}
+                        <span style="color: blue; cursor: pointer;" *ngIf="isLongText" (click)="toggleTrainerInfoMore()">
+                            {{ showFullInfo ? 'Show Less' : 'Show More' }}
+                          </span>
+                    </div>
+
+                    <div class="fifth-tr-fil-specilization">
+                        <div class="spe-in">
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                        </div>
+
+                        <div class="trai-fil-right-btn">
+                            <button class="btn-know-more">Know more</button>
+                            <button class="btn-know-more" style="background: skyblue;">Request to Train</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trainer-fil-card">
+                <div class="left-fil-trainer-img"><img src="https://media.istockphoto.com/id/1702029360/photo/muscular-man-doing-strength-workout-exercise-in-the-gym.webp?b=1&s=170667a&w=0&k=20&c=vSIwWC7edSlq9ok7lmMMEHzxHjWFclQ3LoIUEMNJGjY=" alt=""></div>
+                <div class="right-fil-trainer-info">
+                    <div class="first-tr-fil-right-info">
+                        <h3>Alber Willium <span style="font-size: 16px; font-weight: 400;">&commat;albertwillium</span></h3>
+                        <div class="fil-tr-price">2,000/ <span style="font-size: 16px; font-weight: 400;">per hour</span></div>
+                    </div>
+                    <div class="first-tr-fil-right-info">
+                        <div><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        5.0
+                        </div>
+                    </div>
+
+                    <div class="second-tr-fil-right-info">
+                        <div> <i class="ri-map-pin-line"></i> <span  class="right-fil-tri-location">Ghansoli - Navi Mumbai</span></div>
+                        <div class="right-fil-tri-fav"><i class="ri-heart-line"></i></div>
+                    </div>
+
+                    <div class="third-tr-fil-right-short-info">
+                        {{ showFullInfo ? trainerInfo : (trainerInfo | slice:0:maxLength) + '...' }}
+                        <span style="color: blue; cursor: pointer;" *ngIf="isLongText" (click)="toggleTrainerInfoMore()">
+                            {{ showFullInfo ? 'Show Less' : 'Show More' }}
+                          </span>
+                    </div>
+
+                    <div class="fifth-tr-fil-specilization">
+                        <div class="spe-in">
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                        </div>
+
+                        <div class="trai-fil-right-btn">
+                            <button class="btn-know-more">Know more</button>
+                            <button class="btn-know-more" style="background: skyblue;">Request to Train</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trainer-fil-card">
+                <div class="left-fil-trainer-img"><img src="https://media.istockphoto.com/id/1702029360/photo/muscular-man-doing-strength-workout-exercise-in-the-gym.webp?b=1&s=170667a&w=0&k=20&c=vSIwWC7edSlq9ok7lmMMEHzxHjWFclQ3LoIUEMNJGjY=" alt=""></div>
+                <div class="right-fil-trainer-info">
+                    <div class="first-tr-fil-right-info">
+                        <h3>Alber Willium <span style="font-size: 16px; font-weight: 400;">&commat;albertwillium</span></h3>
+                        <div class="fil-tr-price">2,000/ <span style="font-size: 16px; font-weight: 400;">per hour</span></div>
+                    </div>
+                    <div class="first-tr-fil-right-info">
+                        <div><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        5.0
+                        </div>
+                    </div>
+
+                    <div class="second-tr-fil-right-info">
+                        <div> <i class="ri-map-pin-line"></i> <span  class="right-fil-tri-location">Ghansoli - Navi Mumbai</span></div>
+                        <div class="right-fil-tri-fav"><i class="ri-heart-line"></i></div>
+                    </div>
+
+                    <div class="third-tr-fil-right-short-info">
+                        {{ showFullInfo ? trainerInfo : (trainerInfo | slice:0:maxLength) + '...' }}
+                        <span style="color: blue; cursor: pointer;" *ngIf="isLongText" (click)="toggleTrainerInfoMore()">
+                            {{ showFullInfo ? 'Show Less' : 'Show More' }}
+                          </span>
+                    </div>
+
+                    <div class="fifth-tr-fil-specilization">
+                        <div class="spe-in">
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                        </div>
+
+                        <div class="trai-fil-right-btn">
+                            <button class="btn-know-more">Know more</button>
+                            <button class="btn-know-more" style="background: skyblue;">Request to Train</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trainer-fil-card">
+                <div class="left-fil-trainer-img"><img src="https://media.istockphoto.com/id/1702029360/photo/muscular-man-doing-strength-workout-exercise-in-the-gym.webp?b=1&s=170667a&w=0&k=20&c=vSIwWC7edSlq9ok7lmMMEHzxHjWFclQ3LoIUEMNJGjY=" alt=""></div>
+                <div class="right-fil-trainer-info">
+                    <div class="first-tr-fil-right-info">
+                        <h3>Alber Willium <span style="font-size: 16px; font-weight: 400;">&commat;albertwillium</span></h3>
+                        <div class="fil-tr-price">2,000/ <span style="font-size: 16px; font-weight: 400;">per hour</span></div>
+                    </div>
+                    <div class="first-tr-fil-right-info">
+                        <div><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        5.0
+                        </div>
+                    </div>
+
+                    <div class="second-tr-fil-right-info">
+                        <div> <i class="ri-map-pin-line"></i> <span  class="right-fil-tri-location">Ghansoli - Navi Mumbai</span></div>
+                        <div class="right-fil-tri-fav"><i class="ri-heart-line"></i></div>
+                    </div>
+
+                    <div class="third-tr-fil-right-short-info">
+                        {{ showFullInfo ? trainerInfo : (trainerInfo | slice:0:maxLength) + '...' }}
+                        <span style="color: blue; cursor: pointer;" *ngIf="isLongText" (click)="toggleTrainerInfoMore()">
+                            {{ showFullInfo ? 'Show Less' : 'Show More' }}
+                          </span>
+                    </div>
+
+                    <div class="fifth-tr-fil-specilization">
+                        <div class="spe-in">
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                            <div>
+                                <i style="font-size: 12px;" class="ri-circle-fill"></i>
+                                <span> Strength</span>
+                            </div>
+                        </div>
+
+                        <div class="trai-fil-right-btn">
+                            <button class="btn-know-more">Know more</button>
+                            <button class="btn-know-more" style="background: skyblue;">Request to Train</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -8,7 +8,6 @@ import { LoginRegistrationComponent } from './user/auth/login-registration/login
 import { DashboardComponent } from './user/component/dashboard/dashboard.component';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
-import { ProfileDetailsComponent } from './user/profile-details/profile-details.component';
 import { AllGymsListComponent } from './user/component/all-gyms-list/all-gyms-list.component';
 import { AllTrainerListComponent } from './user/component/all-trainer-list/all-trainer-list.component';
 import { OtherUserSericesComponent } from './user/component/other-user-serices/other-user-serices.component';
@@ -21,7 +20,6 @@ import { OtherUserSericesComponent } from './user/component/other-user-serices/o
     DashboardComponent,
     HeaderComponent,
     FooterComponent,
-    ProfileDetailsComponent,
     AllGymsListComponent,
     AllTrainerListComponent,
     OtherUserSericesComponent

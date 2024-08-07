@@ -13,7 +13,7 @@ const routes: Routes = [
     {path:'dashboard',component:TrainerDashboardComponent,children:[
       {path:'',component:AllComponent},
       {path:'activity',component:ActivityComponent},
-      {path:'trainer-task',component:TaskComponent}  
+      {path:'trainer-task',component:TaskComponent}  ,
     ]},
   // ]},
   

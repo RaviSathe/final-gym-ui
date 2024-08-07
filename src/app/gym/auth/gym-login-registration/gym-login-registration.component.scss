@@ -9,7 +9,7 @@
 
 .form-page{
     width: 80%;
-    height: 680px;
+    height: 700px;
     background: white;
     display: flex;
     justify-content: space-between;
@@ -136,6 +136,16 @@ input::placeholder{
 @media(max-width:940px){
     .left-input{
         width: 90%;
+    }
+}
+
+@media(max-width:550px){
+    .form-page{
+        width: 98%;
+    }
+
+    .left-input{
+        width: 95%;
     }
 }
 

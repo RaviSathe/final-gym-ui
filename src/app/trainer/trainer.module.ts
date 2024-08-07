@@ -19,7 +19,7 @@ import { TrainerComponentHolderComponent } from './common/trainer-component-hold
     AllComponent,
     TrainerDashboardComponent,
     TrainerHeaderComponent,
-    TrainerComponentHolderComponent
+    TrainerComponentHolderComponent,
   ],
   imports: [
     CommonModule,
